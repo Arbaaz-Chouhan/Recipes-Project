@@ -1,8 +1,8 @@
-const getElement =(selector) => {
+const getElement = (selector) => {
     const element = document.querySelector(selector)
-    if(element) return  element
+    if (element) return element
     throw Error(
-       `please  double ckeck class names,there is no ${selector}
+        `please  double ckeck class names,there is no ${selector}
        class`
     )
 }
@@ -10,7 +10,7 @@ const getElement =(selector) => {
 const links = getElement('.nav-links')
 const navBtnDOM = getElement('.nav-btn')
 
-navBtnDOM.addEventListener('clik',() => {
+navBtnDOM.addEventListener('clik', () => {
     links.classList.toggle('show-links')
 })
 
