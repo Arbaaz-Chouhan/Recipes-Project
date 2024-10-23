@@ -5,7 +5,7 @@
 }
 
 /* fonts */
-@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&family=Montserrat&display=swap);
+/* @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&family=Montserrat&display=swap); */
 
 html {
     font-size: 100%;
@@ -408,7 +408,7 @@ footer {
     */
 .hero {
     height: 40vh;
-    background: url(https://gatsby-v3-tutorial-recipes.netlify.app/static/8dcb6bff31d873a27b626d006dda9a98/826b9/main.jpg);
+    background: url("https://gatsby-v3-tutorial-recipes.netlify.app/static/8dcb6bff31d873a27b626d006dda9a98/826b9/main.jpg");
     margin-bottom: 2rem;
     border-radius: var(--borderRedius);
     position: relative;
