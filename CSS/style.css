@@ -1,3 +1,9 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
 *,
 ::after,
 ::before {
@@ -377,6 +383,58 @@ nav img {
     min-height: calc(100vh - (6rem + 4rem));
 }
 
+
+/* Tags Wrapper */
+.tags-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Single Tag */
+.tags-wrapper a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    color: #333;
+}
+
+.tags-wrapper a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Tag Heading */
+.tags-wrapper a h5 {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+}
+
+/* Tag Description */
+.tags-wrapper a p {
+    font-size: 14px;
+    color: #777;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .tags-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* 
   ==========
     Footer
@@ -524,7 +582,7 @@ footer {
     }
 
     .recipes p {
-        font-size :0.85em;
+        font-size: 0.85em;
     }
 
     .tags-container {
@@ -567,7 +625,7 @@ footer {
  ==========
  */
 .recipes-list img {
-    height:300px;
+    height: 300px;
 }
 
 footer {
@@ -651,13 +709,13 @@ footer {
      tags page
      ===============
 */
- .tegs-wrapper {
+.tegs-wrapper {
     display: grid;
     gap: 2rem;
     padding-bottom: 3rem;
 }
 
- .tag {
+.tag {
     background: gray;
     border-radius: var(--borderRedius);
     text-align: center;
@@ -678,22 +736,24 @@ footer {
 .tag h5 {
     font-weight: 600;
 }
-  @media screen and (min-width:576px) {
+
+@media screen and (min-width:576px) {
     .tages-wrepper {
-        grid-template-columns: repeat(2,1fr);
-    
+        grid-template-columns: repeat(2, 1fr);
+
     }
-    
+
 }
-@media screen and (min-width:992px){
+
+@media screen and (min-width:992px) {
     .tages-wrepper {
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(3, 1fr);
 
 
     }
-} 
+}
 
- /*
+/*
     =============== 
      Single Recipes page
     ================
@@ -702,69 +762,82 @@ footer {
     display: grid;
     gap: 3rem;
 }
+
 .recipes-hero-img {
-height: 300px;
-border-radius: var(--borderRedius);
+    height: 300px;
+    border-radius: var(--borderRedius);
 }
+
 .recipes-info p {
     color: gray;
 }
-  .recipes-icons {
+
+.recipes-icons {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     margin: 2rem 0;
     text-align: center;
-  }
-  .recipes-icons i {
-     font-size: 1.5rem;
-     color: var(--primary-500);
-  }
- .recipe-tags {
+}
+
+.recipes-icons i {
+    font-size: 1.5rem;
+    color: var(--primary-500);
+}
+
+.recipe-tags {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     font-size: 0.85;
     font-weight: 600;
 
-  }
+}
+
 .recipes-tags a {
     background: var(--primary-500);
     border-radius: var(--borderRedius);
-    color:white;
+    color: white;
     padding: 0.05rem 0.5rem;
     margin: 0 0.25rem;
     text-transform: capitalize;
 }
-@media screen and (min-width:992px){
+
+@media screen and (min-width:992px) {
     .recipes-hero {
-        grid-template-columns:4fr 5fr;
+        grid-template-columns: 4fr 5fr;
         align-items: center;
     }
 }
+
 .recipes-content {
     padding: 3rem;
     display: grid;
     gap: 2rem 5rem;
 }
-@media screen and (min-width:992px){
+
+@media screen and (min-width:992px) {
     .recipes-content {
-        grid-template-columns:2fr 1fr;
+        grid-template-columns: 2fr 1fr;
     }
 }
+
 .single-instruction header {
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 1.5rem;
     align-items: center;
 }
+
 .single-instruction header div {
     height: 2px;
     background: gray;
 }
-.single-instruction > p{
-    color:gray;
+
+.single-instruction>p {
+    color: gray;
 }
+
 .single-instruction header p {
     text-transform: uppercase;
     font-weight: 600;
@@ -772,18 +845,21 @@ border-radius: var(--borderRedius);
     color: var(--primary-500);
 
 }
+
 .single-column {
     display: grid;
     row-gap: 2rem;
 }
+
 .single-ingredient {
     border-bottom: 2px solid gray;
     padding-bottom: 0.75rem;
     color: gray;
 }
+
 .single-tools {
     border-bottom: 2px solid gray;
     padding-bottom: 0.75rem;
-    color:var(--primary-500);
+    color: var(--primary-500);
     text-transform: capitalize;
 }
